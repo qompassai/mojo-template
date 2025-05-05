@@ -68,7 +68,7 @@ mojo-ai-project/
 ├── CITATION.cff                  # Citation file
 ├── LICENSE-AGPL                  # AGPL license
 ├── LICENSE-QCDA                  # Q-CDA license
-├── mojoproject.toml              # Mojo project configuration
+├── mojoproject.toml              # 🔥 project configuration
 └── magic.lock                    # Dependency lock file
 ```
 

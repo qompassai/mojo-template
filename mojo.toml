@@ -1,0 +1,8 @@
+[project]
+name = "myproject"
+version = "0.1.0"
+authors = ["Matt A. Porter <map@qompass.ai>"]
+description = "Description of your Mojo project"
+
+[dependencies]
+max = ">=0.1.0"

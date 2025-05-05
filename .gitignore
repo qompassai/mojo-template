@@ -1,0 +1,117 @@
+# Archives
+*.tar.gz
+*.tgz
+*.zip
+# Build artifacts and binaries
+bin/
+build/
+dist/
+obj/
+prebuilds/
+target/
+_obj/
+.build/
+.zig-cache/
+zig-cache/
+zig-out/
+# C/C++ artifacts
+*.a
+*.dll
+*.dylib
+*.exp
+*.lib
+*.o
+*.obj
+*.pc
+*.so
+*.so.*
+*.wasm
+
+# Development environment
+.env
+.mypy_cache/
+.npm/
+.pytest_cache/
+__pycache__/
+coverage/
+
+# Editor and IDE files
+.idea/
+.vscode/
+*~
+.netrwhist
+Session.vim
+*.code-workspace
+tags
+cscope.*
+
+# Example directories
+/examples/*/
+
+# Java artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Language-specific
+## .NET
+*.rsuser
+*.suo
+*.user
+
+## Python
+*.egg-info
+*.py[cod]
+*.pyo
+*.whl
+.coverage
+.venv/
+
+# LuaRocks
+*.rock
+*.rockspec
+
+# Metadata
+*.tsbuildinfo
+.config/
+
+# Node artifacts
+node_modules/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Parser and grammar files
+!src/parser.c
+!src/scanner.c
+
+!queries/**
+*.bak
+*.log
+*.swn
+*.swo
+*.swp
+*.tmp
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+
+# Tree-sitter specific
+.tree-sitter-grammar-cache/
+src/grammar.json
+src/node-types.json
+
+# LSP/DAP test data
+.luarc.json
+.debug/
+
+# Test output
+*.out
+test-results/
+
+# Security
+.env*
+*.pem
+*.key

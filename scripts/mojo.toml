@@ -1,0 +1,157 @@
+# ─── mojo.toml ───
+[tool.mojo]
+name = "my_mojo_project"
+version = "0.1.0"
+authors = ["Matt Porter <matt@example.com>"]
+edition = "2024"
+
+[dependencies]
+# Example: std = "*"
+
+# ─── mojoproject.toml ───
+[project]
+name = "my_mojo_project"
+description = "My Mojo project with Modular toolchain"
+version = "0.1.0"
+authors = ["Matt Porter"]
+
+[toolchain]
+mojo = "latest"
+rattler = "latest"
+modo = "latest"
+
+[targets]
+default = "main.mojo"
+
+# ─── pixi.toml ───
+[project]
+name = "my_mojo_project"
+channels = ["https://repo.modular.com", "conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+build = "mojo build ."
+run = "mojo run main.mojo"
+docs = "modo generate docs/"
+
+[dependencies]
+mojo = "*"
+modo = "*"
+
+# ─── .chezmoiignore ───
+# Ignore local build/cache artifacts
+__pycache__/
+build/
+dist/
+.rattler/
+.cache/
+mojo.lock
+.ssh/control/
+.ssh/*.sock
+.ssh/known_hosts.old
+
+# ─── install.sh ───
+#!/bin/bash
+set -euo pipefail
+
+# Bootstrap Modular toolchain project
+mkdir -p "$HOME/dev/my_mojo_project"
+cd "$HOME/dev/my_mojo_project"
+
+chezmoi apply --source="$HOME/.local/share/chezmoi" --destination="$HOME" --include='dot_profile.d/30-mojo.sh'
+
+# Copy project templates if not already present
+for f in mojo.toml mojoproject.toml pixi.toml; do
+  if [[ ! -f "$f" ]]; then
+    chezmoi cat "$f" > "$f"
+    echo "📝 Created $f from template"
+  fi
+done
+
+# Ensure rattler or pixi env is ready
+if command -v pixi &>/dev/null; then
+  pixi sync
+  echo "🚀 pixi environment synced."
+fi
+
+mkdir -p "$HOME/.ssh/config.d"
+
+cat <<EOF > "$HOME/.ssh/config"
+Include ~/.ssh/config.d/*.conf
+EOF
+
+# Create config.d snippets
+cat <<EOF > "$HOME/.ssh/config.d/00-global.conf"
+Host *
+    AddKeysToAgent yes
+    AddressFamily any
+    BatchMode no
+    Compression yes
+    ConnectTimeout 5
+    ControlMaster auto
+    ControlPath ~/.ssh/control:%h:%p:%r
+    ControlPersist 10m
+    ForwardAgent no
+    ForwardX11 no
+    HashKnownHosts yes
+    IdentityAgent /run/user/1000/ssh-agent.socket
+    IPQoS lowdelay throughput
+    PermitLocalCommand yes
+    SetEnv TERM=xterm-256color
+    SetEnv LC_TERMINAL=xterm-256color
+    StrictHostKeyChecking accept-new
+    TCPKeepAlive yes
+    UpdateHostKeys yes
+    VerifyHostKeyDNS yes
+    UserKnownHostsFile ~/.ssh/known_hosts
+EOF
+
+cat <<EOF > "$HOME/.ssh/config.d/10-cluster.conf"
+Host caffe* doppio harbor* pensare* primo
+    User phaedrus
+
+Host harbor
+    HostName harbor
+    Port 2342
+    IdentityFile ~/.ssh/pr2ha
+
+Host pensare
+    HostName pensare
+    Port 2342
+    IdentityFile ~/.ssh/pensare
+EOF
+
+cat <<EOF > "$HOME/.ssh/config.d/20-github.conf"
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    StrictHostKeyChecking accept-new
+    KexAlgorithms curve25519-sha256@libssh.org,curve25519-sha256
+EOF
+
+cat <<EOF > "$HOME/.ssh/config.d/30-gitlab.conf"
+Host gitlab.com
+    HostName gitlab.com
+    User git
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    KexAlgorithms curve25519-sha256@libssh.org,curve25519-sha256
+    StrictHostKeyChecking accept-new
+    ControlMaster no
+EOF
+
+cat <<EOF > "$HOME/.ssh/config.d/40-localcommand.conf"
+Host *
+    LocalCommand \$HOME/.local/bin/.pw-ssh.sh %h
+EOF
+
+chmod 600 "$HOME/.ssh/config"
+chmod 600 "$HOME/.ssh/config.d/"*.conf
+
+if pgrep -u "$USER" ssh-agent >/dev/null; then
+  echo "🔄 SSH agent detected, configs ready."
+fi
+

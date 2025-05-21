@@ -9,6 +9,8 @@
   </a>
   <a href="./LICENSE-QCDA">
     <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
+    ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/mtemplate/total?style=flat-square)
+
   </a>
 </p>
 

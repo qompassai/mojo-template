@@ -1,6 +1,11 @@
-# Qompass AI 🔥 Template
+<!-- /qompassai/mtemplate/README.md -->
+<!-- ---------------------------- -->
+<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
 
-## Template for 🔥 projects
+<h2> Qompass AI Mojo(🔥) Template </h2>
+
+![Repository Views](https://komarev.com/ghpvc/?username=qompassai-mtemplate)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/mtemplate/total?style=flat-square)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Mojo-0A1929?style=for-the-badge&labelColor=0A1929&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI0ZGNTcyMiIgZD0iTTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTEwLjksMTkuOTZDOC45MywxOS45NiA3LjU0LDE4Ljk0IDcuNTQsMTcuNEM3LjU0LDE1LjggOS4wMiwxNC43NiAxMS4xLDE0LjU2TDEyLjU2LDE0LjRWMTNDMTIuNTYsMTIuMzkgMTIuMTMsMTIuMDQgMTEuMzQsMTIuMDRDMTAuMzcsMTIuMDQgOS44OSwxMi41MiA5LjcxLDEzLjM2TDcuODIsMTMuMzNDNy45OCwxMS4xNiA5LjQ2LDEwLjA1IDExLjQzLDEwLjA1QzEzLjQ3LDEwLjA1IDE0LjcyLDExLjI2IDE0LjcyLDEzLjRWMTkuNjdIMTIuNTZWMTguMzJDMTIuMTMsMTkuMjIgMTEuMzQsMTkuOTYgMTAuMzEsMTkuOTZIMTAuOVpNMTEuMywxOC4xMkMxMi4xMywxOC4xMiAxMi41NiwxNy42NCAxMi41NiwxNi44N1YxNi4xNUwxMS40NywxNi4zMkMxMC44NCwxNi40MSAxMC41LDE2Ljc1IDEwLjUsMTcuMjhDMTAuNSwxNy44IDEwLjgsMTguMTIgMTEuMywxOC4xMloiLz48L3N2Zz4=" alt="Mojo">
@@ -9,12 +14,11 @@
   </a>
   <a href="./LICENSE-QCDA">
     <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
-    ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/mtemplate/total?style=flat-square)
-
   </a>
 </p>
 
 ### 🔥 Example
+
 ```🔥
 mojo-ai-project/
 ├── .github/                      # GitHub specific files
@@ -252,24 +256,6 @@ Where:
 
 </details>
 
-<details id="Zenodo DOI">
-  <summary><strong>Digital Object Identifier (DOI) for public transparency and accountability</strong></summary>
-Badge
-
-
-```markdown
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxx)
-```
-
----
-
-- See `.zenodo.json` for metadata, authorship, licensing, and related software attribution.
-</details>
-
-## 🧭 Attribution
-
-
-
 <details id="Dual-License Notice">
   <summary><strong>What a Dual-License Means</strong></summary>
 
@@ -318,12 +304,3 @@ By offering both open source and commercial licensing options, we strive to crea
 
 [^8]: [Minneapolis school district says data breach affected more than 100,000 people](https://therecord.media/minneapolis-schools-say-data-breach-affected-100000/)
 </details>
-
-
-
-![Repository Views](https://komarev.com/ghpvc/?qompassai/mtemplate)
-
-<p align="center">
-  <i>Last Updated: <timestamp></i>
-</p>
-

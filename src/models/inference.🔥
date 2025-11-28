@@ -1,0 +1,19 @@
+@value
+struct InferenceEngine:
+    var model_path: String
+    var device: String
+    var model: Optional[Model]
+    
+    fn __init__(inout self, model_path: String, device: String = "cpu"):
+        self.model_path = model_path
+        self.device = device
+        self.model = None
+        self.load_model()
+    
+    fn load_model(inout self):
+        print("Loading model from", self.model_path)
+        # self.model = load_model_implementation()
+    
+    fn predict(self, input_data: Tensor) -> Tensor:
+        print("Running inference on", self.device)
+        # return self.model.forward(input_data)

@@ -1,4 +1,4 @@
-[project]
+[workspace]
 authors = ["phaedrusflow <map@qompass.ai>"]
 channels = ["https://conda.modular.com/max-nightly", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community", "conda-forge"]
 name = "Templates"
@@ -8,3 +8,4 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
+mojo = ">=0.26.1.0.dev2026010105,<0.27"

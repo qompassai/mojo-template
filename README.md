@@ -11,12 +11,8 @@
   <img
     src="https://img.shields.io/badge/Mojo-0A1929?style=for-the-badge&labelColor=0A1929&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI0ZGNTcyMiIgZD0iTTEyLDJBMTAsMTAgMCAwLDAgMiwxMkExMCwxMCAwIDAsMCAxMiwyMkExMCwxMCAwIDAsMCAyMiwxMkExMCwxMCAwIDAsMCAxMiwyTTEwLjksMTkuOTZDOC45MywxOS45NiA3LjU0LDE4Ljk0IDcuNTQsMTcuNEM3LjU0LDE1LjggOS4wMiwxNC43NiAxMS4xLDE0LjU2TDEyLjU2LDE0LjRWMTNDMTIuNTYsMTIuMzkgMTIuMTMsMTIuMDQgMTEuMzQsMTIuMDRDMTAuMzcsMTIuMDQgOS44OSwxMi41MiA5LjcxLDEzLjM2TDcuODIsMTMuMzNDNy45OCwxMS4xNiA5LjQ2LDEwLjA1IDExLjQzLDEwLjA1QzEzLjQ3LDEwLjA1IDE0LjcyLDExLjI2IDE0LjcyLDEzLjRWMTkuNjdIMTIuNTZWMTguMzJDMTIuMTMsMTkuMjIgMTEuMzQsMTkuOTYgMTAuMzEsMTkuOTZIMTAuOVpNMTEuMywxOC4xMkMxMi4xMywxOC4xMiAxMi41NiwxNy42NCAxMi41NiwxNi44N1YxNi4xNUwxMS40NywxNi4zMkMxMC44NCwxNi40MSAxMC41LDE2Ljc1IDEwLjUsMTcuMjhDMTAuNSwxNy44IDEwLjgsMTguMTIgMTEuMywxOC4xMloiLz48L3N2Zz4="
     alt="Mojo">
-  <a href="https://www.gnu.org/licenses/agpl-3.0">
-    <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3">
-  </a>
-  <a href="./LICENSE-QCDA">
-    <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
-  </a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
+
 </p>
 
 <details>
@@ -482,3 +478,7 @@
         says data breach affected more than 100,000 people</a></p>
   </div>
 </details>
+
+## License
+
+This project is licensed under the [Apache License, Version 2.0](./LICENSE).

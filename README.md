@@ -76,8 +76,6 @@
     ├── .gitignore # Git ignore file
     ├── README.md # Project readme
     ├── CITATION.cff # Citation file
-    ├── LICENSE-AGPL # AGPL license
-    ├── LICENSE-QCDA # Q-CDA license
     ├── mojoproject.toml # 🔥 project configuration
     └── magic.lock # Dependency lock file
     ```
